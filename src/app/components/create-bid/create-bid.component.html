@@ -1,0 +1,37 @@
+<form action="" class="container">
+    <div class="form-group">
+            <label for="buyerId">buyerId:</label>
+            <input type="text" class="form-control" id="buyerId" placeholder="buyerId" name="buyerId" [(ngModel)]="buyerId" text="Basant Mandal" disabled="disabled">
+                
+          </div>
+            <div class="form-group">
+                <label for="buyerCompany">buyerCompany:</label>
+                <input type="text" class="form-control" id="buyerCompany" placeholder="buyerCompany" name="buyerCompany" [(ngModel)]="buyerCompany" [(value)]="name" disabled="disabled">
+            </div>
+            <div class="form-group">
+                <label for="inventoryType">inventoryType:</label>
+                <input type="text" class="form-control" id="inventoryType" placeholder="inventoryType" name="inventoryType" [(ngModel)]="inventoryType">
+            </div>
+            <div class="form-group">
+                <label for="inventoryCount">inventoryCount:</label>
+                <input type="number" class="form-control" id="inventoryCount" placeholder="inventoryCount" name="inventoryCount" [(ngModel)]="inventoryCount">
+            </div>
+            <div class="form-group">
+                <label for="period">period:</label>
+                <input type="number" class="form-control" id="period" placeholder="period" name="period" [(ngModel)]="period">
+            </div>
+            <div class="form-group">
+                <label for="rent">rent:</label>
+                <input type="number" class="form-control" id="rent" placeholder="rent" name="rent" [(ngModel)]="rent">
+            </div>
+            <div class="form-group">
+                <label for="location">location:</label>
+                <input type="text" class="form-control" id="location" placeholder="location" name="location" [(ngModel)]="location">
+            </div>
+            <div class="form-group">
+                <label for="dateCreated">dateCreated:</label>
+                <input type="date" class="form-control" id="dateCreated" placeholder="Enter email" name="dateCreated" [(ngModel)]="dateCreated" >
+            </div>
+
+    <button type="submit" class="btn btn-primary" (click)=createBid()>Submit</button>
+  </form>

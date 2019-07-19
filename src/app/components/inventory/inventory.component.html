@@ -1,0 +1,41 @@
+
+<div class="container">
+
+    <div class="input-group" style="padding-top:5%; padding-bottom:5%">
+        <select class="custom-select" id="inputGroupSelect04">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">Button</button>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px">
+        <div class="col-md-3 col-xs-6 " *ngFor="let inventory of inventory" style="margin-top:1%">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Company Name : {{inventory.companyName}}</h6>
+                    <p class="card-subtitle">Inventry Count : {{inventory.inventoryCount}}</p>
+                    <p class="card-text">Inventry Description :{{inventory.inventoryDescription}}</p>
+                    <p class="card-text">Inventry Type :{{inventory.inventoryType}}</p>
+                    <p class="card-text">Remaining Count :{{inventory.remainingInventoryCount}}</p>
+                    <p class="card-text">Rent :{{inventory.rent}}</p>
+                    <p class="card-text" id="inventoryId">{{inventory.inventoryId}}</p>
+                    <a class="btn btn-primary" (click)="getLeaseId($event)" id={{inventory.inventoryId}} style="color:#fff" href="/lease">Lease</a>
+                    <a class="btn btn-primary" style="margin-left:8%; color:#fff" (click)="getId($event)" id={{inventory.inventoryId}} >Apply Bid</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -13,8 +13,6 @@ export class MachinesService {
   constructor(private http:HttpClient) { }
 
   getMachines():Observable<Machines[]>{
-    return this.http.get<Machines[]>(this.machineUrl)
+    return this.http.get<Machines[]>(this.machineUrl);
   }
 }
-
-

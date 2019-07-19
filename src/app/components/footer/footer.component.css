@@ -1,0 +1,10 @@
+.footer{
+    background-color: #557A95;
+    color: #f8f8f8
+}
+
+a {
+    color: #f8f8f8!important;
+    text-decoration: none;
+    background-color: transparent;
+}

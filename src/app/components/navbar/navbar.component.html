@@ -7,8 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a> 
         </li>
+
      
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -16,22 +17,40 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
       <ul class="navbar-nav mr-auto navbar-right" style="float: right;margin-left:50%">
-
         <li class="nav-item">
-          <a class="nav-link" href="/product-display">Display</a>
+          <a href="" class="nav-link" *ngIf="loginService.isUserLoggedIn()"> Hi</a>
+     </li>
+     <li class="nav-item">
+         <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" href="/sellerProfile">{{this.seller.companyName}}</a>
+       </li>
+     <li class="nav-item">
+     <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" href="/buyer-profile">{{this.data.companyName}}</a>
+     </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/buyer-profile" *ngIf="loginService.isUserLoggedIn()">Buyer Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sellerProfile" *ngIf="loginService.isUserLoggedIn()">Seller Profile</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="!loginService.isUserLoggedIn()">
             Login/ Signup
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item"  class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Client Login</a>
-            <a class="dropdown-item"  class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Vendor Login</a>
+            <a class="dropdown-item"  class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#myClientModalLabel">Client Login</a>
+            <a class="dropdown-item"  class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalVendorLoginForm">Vendor Login</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item"  class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Admin Login</a>
           </div>
         </li>
         
+         
+
+          
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/logout" *ngIf="loginService.isUserLoggedIn()">Logout</a>
+        </li>
       </ul>
     </div>
   </nav>

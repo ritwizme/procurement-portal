@@ -26,3 +26,6 @@ a{
 .fa{
      color:#4183D7;
 }
+.shadow {
+    box-shadow: 10px 10px 5px #888;
+    }

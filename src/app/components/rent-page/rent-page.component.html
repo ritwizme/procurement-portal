@@ -8,41 +8,38 @@
           <div class="col-sm-7">
                 <form style="padding:20px;">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Inventory</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inventory">
+                          <label for="exampleInputEmail1">sellerId</label>
+                          <input type="text" class="form-control" id="sellerId" aria-describedby="sellerId" placeholder="sellerId" [(ngModel)]="sellerId" name="sellerId" readonly="readonly">
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Seller Id</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seller Id">
+                          <label for="exampleInputPassword1">companyName</label>
+                          <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="companyName" [(ngModel)]="companyName" name="companyName" readonly="readonly">
                       
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Company Name</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Company Name">
+                                <label for="exampleInputEmail1">inventoryDescription</label>
+                                <input type="text" class="form-control" id="inventoryDescription" aria-describedby="inventoryDescription" placeholder="inventoryDescription" [(ngModel)]="inventoryDescription" name="inventoryDescription">
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Item Description</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Item Description">
+                                <label for="exampleInputEmail1">inventoryType</label>
+                                <input type="text" class="form-control" id="inventoryType" aria-describedby="inventoryType" placeholder="inventoryType" [(ngModel)]="inventoryType" name="inventoryType">
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Rent</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Rent">
+                                <label for="exampleInputEmail1">rent</label>
+                                <input type="text" class="form-control" id="rent" aria-describedby="emailHelp" placeholder="rent" [(ngModel)]="rent" name="rent">
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Image</label>
-                                <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Image">
+                                <label for="exampleInputEmail1">rentType</label>
+                                <input type="text" class="form-control" id="rentType" aria-describedby="emailHelp" placeholder="rentType" [(ngModel)]="rentType" name="rentType">
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Inventory Id</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inventory Id">
+                                <label for="exampleInputEmail1">inventoryCount</label>
+                                <input type="text" class="form-control" id="inventoryCount" aria-describedby="emailHelp" placeholder="inventoryCount" [(ngModel)]="inventoryCount" name="inventoryCount">
                         </div>
-                        <div class="form-group">
-                                <label for="exampleInputEmail1">Inventory Count</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inventory Count">
-                        </div>
+
                        
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button (click)=register() type="submit" class="btn btn-primary">Submit</button>
                       </form>
           </div>
           
